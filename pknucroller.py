@@ -12,12 +12,16 @@ soup = BeautifulSoup(html, 'html.parser')
 
 my_titles = soup.select(
     '#sbCont > div > table > tbody > tr > td.bdlTitle > a'
+
+
+
 )
 
 
 
 
-#새로운 정보 딕셔너리로 정제
+
+
 new_data = {}
 for title in my_titles :
     new_data[title.text] = title.get('href')
